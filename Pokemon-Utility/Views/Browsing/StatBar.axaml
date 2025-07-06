@@ -1,0 +1,37 @@
+<Panel xmlns="https://github.com/avaloniaui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       x:Class="Pokemon_Utility.Views.Browsing.RightChartBar"
+       HorizontalAlignment="Left"
+       Margin="0,0,0,10"
+       Height="40">
+    <Panel.Styles>
+        <Style Selector="Border.slide">
+            <Style.Animations>
+                <Animation 
+                    Duration="0:0:1.0"
+                    IterationCount="1"
+                    Easing="QuadraticEaseInOut"> 
+                    <KeyFrame Cue="0%">
+                        <Setter Property="Margin" Value="0,0,500,0"/>
+                    </KeyFrame>
+                    <KeyFrame Cue="100%">
+                        <Setter Property="Margin" Value="0,0,0,0"/>
+                    </KeyFrame>
+                </Animation>
+            </Style.Animations>
+        </Style>
+    </Panel.Styles>
+    <Border Name="bar"
+            Classes="slide"
+            CornerRadius="10"
+            HorizontalAlignment="Stretch">
+        <TextBlock Name="statNumber"
+                   FontSize="18"
+                   Foreground="White"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"
+                   Margin="10"
+        ></TextBlock>
+    </Border>
+   
+</Panel>

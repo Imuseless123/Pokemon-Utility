@@ -1,0 +1,16 @@
+<Grid xmlns="https://github.com/avaloniaui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       x:Class="Pokemon_Utility.Views.TeamBuilder.TypeChartBar"
+       Margin="0,0,0,10"
+       ColumnDefinitions="1*,40,1*"
+       Height="40">
+    <Image
+        Grid.Column="1"
+        Name="typeIcon"
+        Source="../../Assets/Types/normal.png"
+        Height="40"
+        Stretch="Uniform"
+        HorizontalAlignment="Center"
+    ></Image>
+    
+</Grid>

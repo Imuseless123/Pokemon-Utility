@@ -1,0 +1,112 @@
+<Panel xmlns="https://github.com/avaloniaui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       x:Class="Pokemon_Utility.Views.TeamBuilder.TeamTopBar"
+       Margin="0,0,0,0"
+       >
+       <Panel.Resources>
+        <ControlTheme x:Key="{x:Type ListBoxItem}" TargetType="ListBoxItem">
+                  <Setter Property="Background" Value="Transparent" />
+                  <Setter Property="Padding" Value="{DynamicResource ListBoxItemPadding}" />
+                  <Setter Property="Template">
+                    <ControlTemplate>
+                      <ContentPresenter Name="PART_ContentPresenter"
+                                        CornerRadius="10"
+                                        Margin="8,8,0,8"
+                                        FontWeight="Bold"
+                                        FontSize="20"
+                                        Padding="10"
+                                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                                        Content="{TemplateBinding Content}"
+                                        VerticalContentAlignment="Center"
+                                        HorizontalContentAlignment="Center"
+                                        Width="300"
+                                        TextAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Height="64"
+                                        />
+                    </ControlTemplate>
+                  </Setter>
+    
+    
+                  <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+                    <Setter Property="Background" Value="#E9E9E9" />
+                    <Setter Property="Foreground" Value="{DynamicResource SystemControlDisabledBaseMediumLowBrush}" />
+                  </Style>
+    
+    
+                  <Style Selector="^:not(:focus) /template/ ContentPresenter#PART_ContentPresenter">
+                    <Setter Property="Background" Value="#C4C4C4" />
+                    <Setter Property="Foreground" Value="White" />
+                  </Style>
+    
+                  <!--  Selected State  -->
+                  <Style Selector="^:selected">
+    
+                    <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                      <Setter Property="Background" Value= "White" />
+                      <Setter Property="Foreground" Value="DimGray" />
+    
+                    </Style>
+    
+                  </Style>
+                </ControlTheme>
+    </Panel.Resources>
+    <!-- <Panel.Resources> -->
+    <!--     <ControlTheme x:Key="{x:Type ListBoxItem}" TargetType="ListBoxItem"> -->
+    <!--               <Setter Property="Background" Value="Transparent" /> -->
+    <!--               <Setter Property="Padding" Value="{DynamicResource ListBoxItemPadding}" /> -->
+    <!--               <Setter Property="Template"> -->
+    <!--                 <ControlTemplate> -->
+    <!--                   <ContentPresenter Name="PART_ContentPresenter" -->
+    <!--                                     Background="#77B9FF" -->
+    <!--                                     BorderBrush="{TemplateBinding BorderBrush}" -->
+    <!--                                     BorderThickness="{TemplateBinding BorderThickness}" -->
+    <!--                                     CornerRadius="10,0,0,10" -->
+    <!--                                     ContentTemplate="{TemplateBinding ContentTemplate}" -->
+    <!--                                     Content="{TemplateBinding Content}" -->
+    <!--                                     FontWeight="Bold" -->
+    <!--                                     FontSize="15" -->
+    <!--                                     Padding="{TemplateBinding Padding}" -->
+    <!--                                     VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" -->
+    <!--                                     HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" -->
+    <!--                                     Height="60" -->
+    <!--                                     TextAlignment="Center" -->
+    <!--                                     /> -->
+    <!--                 </ControlTemplate> -->
+    <!--               </Setter> -->
+    <!--                -->
+    <!-- -->
+    <!--               <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter"> -->
+    <!--                 <Setter Property="Background" Value="DimGray" /> -->
+    <!--                 <Setter Property="Foreground" Value="{DynamicResource SystemControlDisabledBaseMediumLowBrush}" /> -->
+    <!--               </Style> -->
+    <!-- -->
+    <!-- -->
+    <!--                -->
+    <!--               <Style Selector="^:not(:focus) /template/ ContentPresenter#PART_ContentPresenter"> -->
+    <!--                 <Setter Property="Background" Value="#C4C4C4" /> -->
+    <!--                 <Setter Property="Foreground" Value="White" /> -->
+    <!--               </Style> -->
+    <!--                -->
+    <!--               ~1~  Selected State  @1@ -->
+    <!--               <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter"> -->
+    <!--                 <Setter Property="Background" Value= "White" /> -->
+    <!--                 <Setter Property="Foreground" Value="DimGray" /> -->
+    <!--               </Style> -->
+    <!--             </ControlTheme>   -->
+    <!-- </Panel.Resources> -->
+       <ListBox
+              Name="tabBar"
+              Background="#E9E9E9">
+              <ListBox.ItemContainerTheme >
+                    
+              </ListBox.ItemContainerTheme>
+              <ListBox.ItemsPanel>
+                     <ItemsPanelTemplate>
+                            <StackPanel Orientation='Horizontal'/>
+                     </ItemsPanelTemplate>
+              </ListBox.ItemsPanel>
+              
+       </ListBox>
+
+</Panel>

@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{A102F7D7-03D3-4A7E-83A0-F35CA50F9CFD}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pokemon-Utility/Views/Browsing/BrowsingQuery.cs">
+    <Files>
+      <File FileName="Pokemon-Utility/Views/Browsing/BrowsingView.axaml.cs" Line="99" Column="44" />
+      <File FileName="Pokemon-Utility/Views/Browsing/BrowsingQuery.cs" Line="53" Column="135" />
+      <File FileName="Pokemon-Utility/Views/Browsing/DataCard.cs" Line="1" Column="1" />
+      <File FileName="Pokemon-Utility/Views/Browsing/Filter.cs" Line="28" Column="39" />
+      <File FileName="Pokemon-Utility/Views/Browsing/sorting.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Option id="ShowAllFiles" value="True" />
+          <Node name="Pokemon-Utility">
+            <Node name="Pokemon-Utility">
+              <Node name="Views">
+                <Node name="Browsing">
+                  <Node name="BrowsingQuery.cs" selected="True" />
+                  <Node name="BrowsingView.axaml" expanded="True" />
+                  <Node name="MoveCard.axaml" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Pokemon-Utility PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

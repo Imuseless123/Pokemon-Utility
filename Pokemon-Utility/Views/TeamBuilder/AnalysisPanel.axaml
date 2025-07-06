@@ -1,0 +1,62 @@
+<Panel xmlns="https://github.com/avaloniaui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       x:Class="Pokemon_Utility.Views.TeamBuilder.AnalysisPanel"
+       Margin="20"
+       >
+    <Border
+        Name="roundCornerBorder"
+        CornerRadius="20">
+        <Grid
+                RowDefinitions="1*,5*">
+                <StackPanel Grid.Row="0">
+                    <TextBlock
+                                       Margin="0,20,0,10"
+                                       FontWeight="Bold"
+                                       FontSize="40"
+                                       Foreground="White"
+                                       TextAlignment="Center"
+                                       Text="Analysis"/>
+                    <TextBlock
+                        Margin="0,0,0,0"
+                        FontWeight="Bold"
+                        FontSize="20"
+                        Foreground="White"
+                        TextAlignment="Center"
+                        Text="Defensive capability of overall typing of your team"/>
+                </StackPanel>
+                
+                <Grid Grid.Row="0"
+                      ColumnDefinitions="5*,1*,5*"
+                      VerticalAlignment="Bottom">
+                    <TextBlock Grid.Column="0" 
+                               Foreground="IndianRed"
+                               FontWeight="Bold"
+                               FontSize="20"
+                               Margin="0,0,10,0"
+                               HorizontalAlignment="Right"
+                               >Weak to</TextBlock>
+                    <!-- <TextBlock Grid.Column="1"  -->
+                    <!--            Foreground="White" -->
+                    <!--            FontWeight="Bold" -->
+                    <!--            FontSize="20" -->
+                    <!--            HorizontalAlignment="Right" -->
+                    <!-- >Type</TextBlock> -->
+                    <TextBlock Grid.Column="2" 
+                               Foreground="PaleGreen"
+                               FontWeight="Bold"
+                               FontSize="20"
+                               Margin="10,0,0,0"
+                               HorizontalAlignment="Left"
+                    >Strong to</TextBlock>
+                </Grid>
+                <ScrollViewer Grid.Row="1"
+                              Margin="0,0,0,20">
+                    <StackPanel 
+                        Name="anaStackPanel"
+                        VerticalAlignment="Center"></StackPanel>
+                </ScrollViewer>
+            </Grid>
+    </Border>
+    
+
+</Panel>

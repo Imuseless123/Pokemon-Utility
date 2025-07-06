@@ -10,11 +10,31 @@
 
 
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="11.0.2"/>
-        <PackageReference Include="Avalonia.Desktop" Version="11.0.2"/>
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.2"/>
-        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.2"/>
+        <PackageReference Include="Avalonia" Version="11.0.2" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.2" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.2" />
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.2" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.2"/>
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.14">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.14" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.14">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="PokeApiNet" Version="4.0.0" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Views\TeamBuilder\" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Views\TeamBuilder\" />
+    </ItemGroup>
+    <ItemGroup>
+        <AvaloniaResource Include="Assets\**"/>
     </ItemGroup>
 </Project>

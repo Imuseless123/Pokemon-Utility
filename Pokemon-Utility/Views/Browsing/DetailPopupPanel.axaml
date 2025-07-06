@@ -1,0 +1,166 @@
+<Panel xmlns="https://github.com/avaloniaui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       x:Class="Pokemon_Utility.Views.Browsing.DetailPopupPanel"
+       Margin="0,80,0,0"
+       HorizontalAlignment="Stretch"
+       VerticalAlignment="Stretch">
+       
+       <Panel.Styles>
+              <Style Selector="Border.slide">
+                     <Setter Property="Opacity" Value="1"/>
+                     <Style.Animations>
+                            <Animation 
+                                   Duration="0:0:0.4"
+                                   IterationCount="1"
+                                   Easing="QuadraticEaseInOut"> 
+                                   <KeyFrame Cue="0%">
+                                          <Setter Property="Margin" Value="0,2000,0,0"/>
+                                   </KeyFrame>
+                                   <KeyFrame Cue="100%">
+                                          <Setter Property="Margin" Value="0,0,0,0"/>
+                                   </KeyFrame>
+                            </Animation>
+                     </Style.Animations>
+              </Style>
+              <Style Selector="Border.stat">
+                     <Style.Animations>
+                            <Animation 
+                                   Duration="0:0:0.8"
+                                   IterationCount="1"
+                                   Easing="CircularEaseOut"> 
+                                   <KeyFrame Cue="0%">
+                                          <Setter Property="Margin" Value="0,0,200,0"/>
+                                   </KeyFrame>
+                                   <KeyFrame Cue="100%">
+                                          <Setter Property="Margin" Value="0,0,0,0"/>
+                                   </KeyFrame>
+                            </Animation>
+                     </Style.Animations>
+              </Style>
+              <Style Selector="TextBlock.description">
+                     <Setter Property="FontSize"  Value="30"/>
+                     <Setter Property="FontWeight"  Value="Bold"/>
+                     <Setter Property="Foreground"  Value="#333333"/>
+
+                     
+              </Style>
+       </Panel.Styles>
+       <Border
+              Classes="slide"
+              CornerRadius="20"
+              BorderThickness="5"
+              Background="White">
+              <Panel>
+                    
+                     <Border
+                            Name ="HeaderBar"
+                            CornerRadius="20,20,0,0"
+                            Height="80"
+                            VerticalAlignment="Top"
+                            >
+                            <Panel>
+                                   <TextBlock Name="HeaderTextBox"
+                                              Margin="40,0,0,0"
+                                              Foreground="White"
+                                              FontWeight="Bold"
+                                              FontSize="40"
+                                              VerticalAlignment="Center"
+                                   ></TextBlock>
+                                   <Button
+                                          Name="CloseButton"
+                                          Background="Gray"
+                                          Foreground="White"
+                                          CornerRadius="20"
+                                          Height="40"
+                                          Width="40"
+                                          Margin="10"
+                                          FontSize="30"
+                                          HorizontalAlignment="Right"
+                                          VerticalAlignment="Center">
+                                          <Image
+                                                 VerticalAlignment="Center"
+                                                 Source="../../Assets/dropdown.png"
+                                                 Stretch="Uniform"
+                                                 >
+                                          </Image>
+                                   </Button>
+                            </Panel>
+                            
+                     </Border>
+                     <Grid
+                            Margin="0,80,0,0"
+                            ColumnDefinitions="2*,3*"
+                            RowDefinitions="1*,1*"
+                            >
+                            <Border Grid.Column="0"
+                                    Grid.Row="0"
+                                    CornerRadius="0,0,20,20"
+                                    Background="LightSteelBlue"
+                                    >
+                                   <Image Name="PokemonImage"
+                                   
+                                          Source="../../Assets/pokemon/0.png"
+                                          Stretch="Uniform"
+                                          RenderOptions.BitmapInterpolationMode="None"></Image>
+                            </Border>
+                            
+                            <StackPanel
+                                   Name="infoStackPanel"
+                                   Grid.Column="0"
+                                   Grid.Row="1">
+                                   <StackPanel   Name="typePanel" 
+                                          Orientation="Horizontal">
+                                          <TextBlock
+                                                 Name="typeText"
+                                                 FontWeight="Bold"
+                                                 FontSize="30">Type:</TextBlock>
+                                   </StackPanel>
+                                   
+                                   
+                            </StackPanel>
+                            <Grid
+                                   Name="MoveListPanel"
+                                   RowDefinitions="80,1*"
+                                   Grid.Column="1"
+                                   Grid.Row="0"
+                                   Grid.RowSpan="2"
+                                   >
+                                   <Panel
+                                          Name="moveTitle"
+                                          Grid.Row="0"
+                                          Classes="description"
+                                          >
+                                          <TextBlock
+                                                 Text="Loading move..."
+                                                 FontSize="40"
+                                                 FontWeight="Bold"
+                                                 ></TextBlock>
+                                   </Panel>
+                                   <ScrollViewer
+                                          
+                                          Grid.Row="1">
+                                          <StackPanel
+                                                 Name="scrollViewerContent"
+                                                 Orientation="Vertical"
+                                                 ></StackPanel>
+                                          
+                                   </ScrollViewer>
+                            </Grid>
+                            <!-- <StackPanel -->
+                            <!--         -->
+                            <!--        Grid.Column="1" -->
+                            <!--        Grid.Row="0" -->
+                            <!--        Grid.RowSpan="2" -->
+                            <!--        Orientation="Vertical" -->
+                            <!--        > -->
+                            <!--         -->
+                            <!--         -->
+                            <!-- </StackPanel> -->
+                            
+                     </Grid>
+                     <TextBlock Name="testText"></TextBlock>                     
+              </Panel>
+              
+       </Border>
+    
+</Panel>

@@ -1,0 +1,30 @@
+<Panel xmlns="https://github.com/avaloniaui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       x:Class="Pokemon_Utility.Views.TeamBuilder.TeamView"
+       Margin="80,0,0,0"
+       Background="White">
+    <Grid
+        Name="grid"
+        RowDefinitions="80,1*"
+        >
+ 
+    </Grid>
+    <Button
+        Name="refreshButton"
+        Content="Refresh Page"
+        FontWeight="Bold"
+        FontSize="20"
+        Padding="10"
+        Margin="8"
+        Background="#C4C4C4"
+        Foreground="White"
+        CornerRadius="10"
+        Height="64"
+        VerticalAlignment="Top"
+        HorizontalAlignment="Right"
+        VerticalContentAlignment="Center"
+        >
+        
+    </Button>
+    
+</Panel>

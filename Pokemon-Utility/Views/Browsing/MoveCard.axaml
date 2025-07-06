@@ -1,0 +1,40 @@
+<Grid xmlns="https://github.com/avaloniaui"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      x:Class="Pokemon_Utility.Views.Browsing.MoveCard"
+      Margin="20,0,0,0"
+      ColumnDefinitions= "3*,1*,1*,1*,1*">
+    <TextBlock Name="nameBox"
+               Grid.Column="0"
+               Margin="0,10,0,10"
+               Foreground="Black"
+               FontSize="30">
+    </TextBlock>
+    
+    <TextBlock Name="typeBox"
+               Grid.Column="1"
+               Margin="0,10,0,10"
+               Foreground="Black"
+               FontSize="30">
+    </TextBlock>
+    <TextBlock Name="powerBox"
+               Grid.Column="2"
+               Margin="0,10,0,10"
+               Foreground="Black"
+               FontSize="30">
+    </TextBlock>
+    <TextBlock Name="accBox"
+               Grid.Column="3"
+               Margin="0,10,0,10"
+               Foreground="Black"
+               FontSize="30">
+    </TextBlock>
+    <TextBlock Name="ppBox"
+               Grid.Column="4"
+               Margin="0,10,0,10"
+               Foreground="Black"
+               FontSize="30">
+    </TextBlock>
+    
+    
+</Grid>
+       

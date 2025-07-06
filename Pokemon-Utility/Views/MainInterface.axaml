@@ -1,9 +1,85 @@
-<StackPanel xmlns="https://github.com/avaloniaui"
+<Panel xmlns="https://github.com/avaloniaui"
        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-       x:Class="Pokemon_Utility.Views.MainInterface"
-       Orientation="Horizontal">
-        <StackPanel
-            Background="CornflowerBlue"
-            Width="100"
-            ></StackPanel>
-</StackPanel>
+       x:Class="Pokemon_Utility.Views.MainInterface">
+    <Panel.Resources>
+        <ControlTheme x:Key="{x:Type ListBoxItem}" TargetType="ListBoxItem">
+                  <Setter Property="Background" Value="Transparent" />
+                  <Setter Property="Padding" Value="{DynamicResource ListBoxItemPadding}" />
+                  <Setter Property="Template">
+                    <ControlTemplate>
+                      <ContentPresenter Name="PART_ContentPresenter"
+                                        Background="#77B9FF"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="10,0,0,10"
+                                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                                        Content="{TemplateBinding Content}"
+                                        FontWeight="Bold"
+                                        FontSize="15"
+                                        Padding="{TemplateBinding Padding}"
+                                        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        Height="60"
+                                        TextAlignment="Center"
+                                        />
+                    </ControlTemplate>
+                  </Setter>
+                  
+
+                  <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+                    <Setter Property="Background" Value="#77B9FF" />
+                    <Setter Property="Foreground" Value="{DynamicResource SystemControlDisabledBaseMediumLowBrush}" />
+                  </Style>
+
+                  <!--  PointerOver State  -->
+                  <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                    <Setter Property="Background" Value="{DynamicResource SystemControlHighlightListLowBrush}" />
+                    <Setter Property="Foreground" Value="{DynamicResource SystemControlHighlightAltBaseHighBrush}" />
+                  </Style>
+
+                  <!--  Pressed State  -->
+                  <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+                    <Setter Property="Background" Value="{DynamicResource SystemControlHighlightListMediumBrush}" />
+                    <Setter Property="Foreground" Value="{DynamicResource SystemControlHighlightAltBaseHighBrush}" />
+                  </Style>
+                  
+                  <Style Selector="^:not(:focus) /template/ ContentPresenter#PART_ContentPresenter">
+                    <Setter Property="Background" Value="#77B9FF" />
+                    <Setter Property="Foreground" Value="White" />
+                  </Style>
+                  
+                  <!--  Selected State  -->
+                  <Style Selector="^:selected">
+
+                    <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                      <Setter Property="Background" Value= "#FFFFFF" />
+                      <Setter Property="Foreground" Value="#77B9FF" />
+                      
+                    </Style>
+                    
+                  </Style>
+                </ControlTheme>  
+    </Panel.Resources>
+    <StackPanel
+            Width="80"
+            HorizontalAlignment="Left"
+            Name="SideBar">
+            <Panel
+                Width="80"
+                Height="80"
+                Name="LogoBox">
+                <Image 
+                    Height="60"
+                    Width="60"
+                    Name="LogoImage"
+                    Source="../Assets/pokeball.png"/>
+            </Panel>
+            <ListBox
+                Background="#77B9FF"
+                Name="TabBar">
+                <ListBox.ItemContainerTheme >
+                    
+                </ListBox.ItemContainerTheme>
+            </ListBox>
+    </StackPanel>
+</Panel>

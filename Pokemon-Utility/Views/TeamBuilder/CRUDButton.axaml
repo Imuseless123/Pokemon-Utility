@@ -1,0 +1,9 @@
+<Panel xmlns="https://github.com/avaloniaui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       x:Class="Pokemon_Utility.Views.TeamBuilder.CRUDButton"
+       Margin="0,0,0,0"
+       >
+       <Grid
+              Name="grid"
+              ColumnDefinitions="1*,1*,1*"></Grid>
+</Panel>
